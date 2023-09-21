@@ -34,6 +34,10 @@ ul
 {
     margin: 0%;
     list-style: none;
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+
 }
 li a
 {
