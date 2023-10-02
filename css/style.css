@@ -110,3 +110,47 @@ button
     margin: auto;
     padding-left: 5px;
 }
+.for-blocks
+{
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 0;
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+}
+.for-ul-blocks
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2%;
+}
+.for-main-text
+{
+    color: rgba(0,0,0,0.5)
+}
+.for-blocks-image
+{
+    border-radius: 100px;
+    border: 3px solid green;
+    width: 40px;
+    height: 40px;
+}
+.for-div-image
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 20% 0;
+}
+.for-div-text
+{
+    position: absolute;
+    display: flex;
+    padding-left: 300%;
+}
