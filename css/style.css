@@ -124,7 +124,7 @@ button
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 2%;
 }
 .for-main-text
