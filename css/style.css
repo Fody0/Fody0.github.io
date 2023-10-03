@@ -155,6 +155,7 @@ button
     position: absolute;
     display: flex;
     padding-left: 600%;
+<<<<<<< HEAD
 }
 .for-main-div-for-blocks
 {
@@ -163,4 +164,6 @@ button
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 2%;
+=======
+>>>>>>> 3e1f03bae251153e85c0399be751d3581bd47e05
 }
