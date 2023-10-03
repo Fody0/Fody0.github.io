@@ -143,14 +143,15 @@ button
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: relative;
     max-width: 100%;
     max-height: 100%;
-    margin: 18% 0;
+    margin-right: 90%;
+    margin-top: 70%;
 }
 .for-div-text
 {
     position: absolute;
     display: flex;
-    padding-left: 300%;
+    padding-left: 600%;
 }
