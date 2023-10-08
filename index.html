@@ -5,6 +5,18 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2015</title>
+    <script>
+        function myf()
+        {
+            alert("dasd");
+        }
+    </script>
+    <script>
+        function check_form()
+        {
+            console.log(document.forms[0].name.value);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -26,17 +38,81 @@
     </header>
     <main >
     <div class="wrapper for-index-main">
-        <h1>Добро пожаловать</h1>
+        <h1>Добро пожаловать
+        </h1>
         <div>
             sgsdgdfgfdgsfdgs
         </div>
         <div>
-            <button>Привет</button>
+            <button onclick="myf()">Привет</button>
         </div>
     </div>
     </main>
-
-    <footer >
+<Div class="for-form-div">
+    <div class="for-form-new">
+        <form class="form-class" action="" method="get">
+            <div>Как вам удобно получить ответ:</div>
+            <div>
+                <label for="c_mail">
+                    <input type="radio" name="com_tion" id="c_mail"> по почте
+                </label>
+                <br>
+                <label for="c_tel">
+                    <input type="radio" name="com_tion" id="c_tel"> по телефону
+                </label>
+                <br>
+                <label for="c_mail">
+                    <input type="radio" name="com_tion" id="c_none"> не нужно отвечать
+                </label>
+                <br>
+            </div>
+            <div>
+                <label for="theme">
+                    Укажите тему вопроса
+                </label> <br>
+                <select class="for-krasota" name="theme" id="theme">
+                    <option value="work">работа</option>
+                    <option value="cooperation">сотрудничество</option>
+                    <option value="personal">личное</option>
+                </select>
+            </div>
+            <div class="for-checkbox-div">
+                <div> И ещё один вопрос?</div>
+                <label for="chb1">
+                    <input type="checkbox" name="chb1" id="chb1">может так
+                </label>
+                <label for="chb2">
+                    <input type="checkbox" name="chb2" id="chb2">или не так
+                </label>
+                <label for="chb3">
+                    <input type="checkbox" name="chb3" id="chb3">иначе
+                </label>
+            </div>
+            <div class="for-textbox-wrap">
+                <label for="name">Ваше имя</label>
+                <input class="for-krasota" type="text" name="name" id="name" size="20" pattern="[A-Z]+"required>
+            </div>
+            <div class="for-textbox-wrap">
+                <label for="email">Адрес почты&nbsp&nbsp</label>
+                <input class="for-krasota" type="email" name="email" id="email">
+            </div>
+            <div class="for-textbox-wrap">
+                <label for="tel">Телефон</label>
+                <input class="for-krasota" type="tel" name="tel" id="tel">
+            </div>
+            <div>Ваш вопрос:</div>
+            <div >
+                <textarea  cols="35"></textarea>
+            </div>
+            <div class="for-button-div">
+                <button class="for-krasota">отправить вопрос</button>
+            </div>
+            
+            <button onclick="check_form()">проверка</button>
+        </form>
+    </div>
+</Div>
+    <footer>
     <div class="wrapper flex-between-center">
         <h6 class="for-h6">Носков А.Е.</h6>
         <div class="for-pochita">

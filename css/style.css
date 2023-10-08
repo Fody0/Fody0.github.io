@@ -159,3 +159,50 @@ button
 {
     display: flex;
 }
+.for-form-new
+{
+    display: flex;
+    background-color: white;
+    border-radius: 70px;
+    border: 3px solid orange;
+    margin: 2%;
+    padding: 2%;
+    width: 300px;
+    height: 500px;
+    justify-content: space-around;
+}
+.for-form-div
+{
+    
+    display: flex;
+    justify-content: center;
+
+}
+.for-button-div
+{
+    display: flex;
+    justify-content: center;
+}
+.for-checkbox-div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.for-textbox-wrap
+{
+    display: flex;
+    justify-content: space-between;
+}
+.form-class
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.for-krasota
+{
+    border: 3px solid orange;
+    background-color: rgba(251, 192, 147,0.4);
+    border-radius: 50px;
+}
