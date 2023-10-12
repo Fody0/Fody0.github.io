@@ -5,6 +5,48 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2015</title>
+    <script>
+        function myf()
+        {
+            alert("dasd");
+        }
+    </script>
+    <script>
+        function check_form()
+        {
+            
+            for( i=0;document.forms[0].elements.com_tion.length; i++)
+            {
+                if(document.forms[0].elements.com_tion[i].checked)
+                { 
+                    var text=document.forms[0].elements.com_tion[i].value;
+                    break
+                }
+            }
+            var text1=""
+            if(document.forms[0].elements.chb1.checked)
+            {
+                text1+=document.forms[0].elements.chb1.value+"  "
+            }
+            if(document.forms[0].elements.chb2.checked)
+            {
+                text1+=document.forms[0].elements.chb2.value+"  "
+            }
+            if(document.forms[0].elements.chb3.checked)
+            {
+                text1+=document.forms[0].elements.chb3.value+"  "
+            }
+            console.log("Уважаемый "+document.forms[0].elements.name.value+"\n"+"Ваш адрес почты "+document.forms[0].elements.email.value+
+            "\n"+" Ваш телефон "+document.forms[0].elements.tel.value+"\n"+" Вам удобнее получить ответ: "+text+"\n"+" Тема вопроса: "+
+            document.forms[0].elements.theme[document.forms[0].elements.theme.selectedIndex].value+"\n"+" И ещё вопрос: "+ text1+
+            "\n"+" Ваш вопрос: "+ document.getElementById("taa1").value);
+            //document.getElementById("c_mail").style.color="red";
+            //document.myform.name.value="asdadasdasdas";
+            //alert(document.forms[0].elements.name.value="21323432423423")
+            //alert(document.forms[0].com_tion[0].inner)
+            //alert(document.forms[0].elements.theme.selectedIndex)
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -23,19 +65,19 @@
     </header>
         <Div class="for-form-div">
             <div class="for-form-new">
-                <form class="form-class" action="" method="get">
+                <form class="form-class" action="" method="get" name="myform">
                     <div>Как вам удобно получить ответ:</div>
                     <div>
                         <label for="c_mail">
-                            <input type="radio" name="com_tion" id="c_mail"> по почте
+                            <input type="radio" name="com_tion" id="c_mail" value="по почте"> по почте
                         </label>
                         <br>
                         <label for="c_tel">
-                            <input type="radio" name="com_tion" id="c_tel"> по телефону
+                            <input type="radio" name="com_tion" id="c_tel" value="по телефону"> по телефону
                         </label>
                         <br>
                         <label for="c_mail">
-                            <input type="radio" name="com_tion" id="c_none"> не нужно отвечать
+                            <input type="radio" name="com_tion" id="c_none" value="не нужно отвечать"> не нужно отвечать
                         </label>
                         <br>
                     </div>
@@ -52,13 +94,13 @@
                     <div class="for-checkbox-div">
                         <div> И ещё один вопрос?</div>
                         <label for="chb1">
-                            <input type="checkbox" name="chb1" id="chb1">может так
+                            <input type="checkbox" name="chb1" id="chb1" value="может так">может так
                         </label>
                         <label for="chb2">
-                            <input type="checkbox" name="chb2" id="chb2">или не так
+                            <input type="checkbox" name="chb2" id="chb2" value="или не так">или не так
                         </label>
                         <label for="chb3">
-                            <input type="checkbox" name="chb3" id="chb3">иначе
+                            <input type="checkbox" name="chb3" id="chb3" value="иначе">иначе
                         </label>
                     </div>
                     <div class="for-textbox-wrap">
@@ -75,7 +117,7 @@
                     </div>
                     <div>Ваш вопрос:</div>
                     <div >
-                        <textarea  cols="35"></textarea>
+                        <textarea id="taa1" name="tb1"  cols="35"></textarea>
                     </div>
                     <div class="for-button-div">
                         <button class="for-krasota">отправить вопрос</button>
