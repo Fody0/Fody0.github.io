@@ -7,9 +7,83 @@
     <title>2015</title>
 </head>
 <body>
-        <h1>Добро пожаловать</h1>
-        <div class="for-form">
-            sgsdgdfgfdgsfdgs
-        </div>
+    <header>
+        <h2>
+            Веб-технологии
+            <img src="images/zt8eCKu_GeQ.jpg" alt="" width="50" class="pic-border">
+            <nav>
+                <ul>
+                <ol><a href="index.html">Главная</a></ol>
+                <ol><a href="summary.html">Резюме</a></ol>
+                <ol><a href="competencion.html">Компетенции</a></ol>
+                <ol><a href="photos.html">Фото</a></ol>
+                </ul>
+            </nav>
+        </h2>
+    </header>
+        <Div class="for-form-div">
+            <div class="for-form-new">
+                <form class="form-class" action="" method="get">
+                    <div>Как вам удобно получить ответ:</div>
+                    <div>
+                        <label for="c_mail">
+                            <input type="radio" name="com_tion" id="c_mail"> по почте
+                        </label>
+                        <br>
+                        <label for="c_tel">
+                            <input type="radio" name="com_tion" id="c_tel"> по телефону
+                        </label>
+                        <br>
+                        <label for="c_mail">
+                            <input type="radio" name="com_tion" id="c_none"> не нужно отвечать
+                        </label>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="theme">
+                            Укажите тему вопроса
+                        </label> <br>
+                        <select class="for-krasota" name="theme" id="theme">
+                            <option value="work">работа</option>
+                            <option value="cooperation">сотрудничество</option>
+                            <option value="personal">личное</option>
+                        </select>
+                    </div>
+                    <div class="for-checkbox-div">
+                        <div> И ещё один вопрос?</div>
+                        <label for="chb1">
+                            <input type="checkbox" name="chb1" id="chb1">может так
+                        </label>
+                        <label for="chb2">
+                            <input type="checkbox" name="chb2" id="chb2">или не так
+                        </label>
+                        <label for="chb3">
+                            <input type="checkbox" name="chb3" id="chb3">иначе
+                        </label>
+                    </div>
+                    <div class="for-textbox-wrap">
+                        <label for="name">Ваше имя</label>
+                        <input class="for-krasota" type="text" name="name" id="name" size="20" pattern="[A-Z]+"required>
+                    </div>
+                    <div class="for-textbox-wrap">
+                        <label for="email">Адрес почты&nbsp&nbsp</label>
+                        <input class="for-krasota" type="email" name="email" id="email">
+                    </div>
+                    <div class="for-textbox-wrap">
+                        <label for="tel">Телефон</label>
+                        <input class="for-krasota" type="tel" name="tel" id="tel">
+                    </div>
+                    <div>Ваш вопрос:</div>
+                    <div >
+                        <textarea  cols="35"></textarea>
+                    </div>
+                    <div class="for-button-div">
+                        <button class="for-krasota">отправить вопрос</button>
+                    </div>
+                    
+                    <button onclick="check_form()">проверка</button>
+                </form>
+            </div>
+        </Div>
 </body>
 </html>
