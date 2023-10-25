@@ -5,6 +5,26 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2015</title>
+    <script>
+            function allsize(){
+                for (i=0;i<5;i++){
+            document.images[i+1].style.width="150px";
+            document.images[i+1].style.height="200px";
+                }
+        }
+        function Image_size_increase(){
+            for (i=0;i<5;i++){
+            document.images[i+1].style.width='400px';
+            document.images[i+1].style.height='300px';
+            }
+        }
+        function Image_size_decrease(){
+            for (i=0;i<5;i++){
+            document.images[i+1].style.width='100px';
+            document.images[i+1].style.height='100px';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -24,16 +44,21 @@
     <main class="padding-text pic-border" >
         <h1>Фото</h1>
         <div>
-            <img src="images/3F3F3F.webp" alt=""width="200" class="pic-border" >
+            <img src="images/3F3F3F.webp" alt="" width="200" height="150" class="pic-border" >
             <figcaption>Почита</figcaption>
-            <img src="images/ca54372b4745bcf3f1a4f1d1d7fee2cd.jpeg" alt="" width="200" class="pic-border">
+            <img src="images/ca54372b4745bcf3f1a4f1d1d7fee2cd.jpeg" alt=""width="200" height="150" class="pic-border">
             <figcaption>Тапки</figcaption>
-            <img src="images/Pochita.gif" alt="" class="pic-border">
+            <img src="images/Pochita.gif" alt="" width="200" height="150" class="pic-border">
             <figcaption>Фигурка</figcaption>
-            <img src="images/6474723968.jpg" alt="" class="pic-border">
+            <img src="images/6474723968.jpg" alt="" width="200" height="150" class="pic-border">
             <figcaption>Брелок</figcaption>
-            <img src="images/qAgzsz3ODVQ.jpg" alt="" class="pic-border">
+            <img src="images/qAgzsz3ODVQ.jpg" alt="" width="200" height="150" class="pic-border">
             <figcaption>У меня кончились идеи</figcaption>
+        </div>
+        <div>
+            <button onclick="Image_size_increase()"> Увеличить размер картинок </button>
+            <button onclick="Image_size_decrease()"> Уменьшить размер картинок </button>
+            <button onclick="allsize()"> Выровнять размер </button>
         </div>
         <table border="1">
             <thead>

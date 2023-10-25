@@ -41,6 +41,13 @@
         <h1>Добро пожаловать
         </h1>
         <div>
+            <textarea oninput="inp()" name="Ta1" id="ta1" cols="30" rows="10"></textarea>
+            <script>
+                function inp(){
+               localStorage.setItem('ta1',ta1.value);
+                }
+                ta1.value=localStorage.getItem('ta1');
+        </script>
             sgsdgdfgfdgsfdgs
         </div>
         <div>
