@@ -64,6 +64,9 @@ button
     width: 100px;
     height: 50px;
 }
+.for-resize-images-button-div{
+    display: flex;
+}
 .padding-text
 {
     padding: 5%;

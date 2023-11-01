@@ -25,19 +25,19 @@
             document.images[i+1].style.height='100px';
             }
         }
-        function changing(){
-            event.target.classList.add("clicked");
-            if(history.back()==undefined){
+        //function changing(){
+         //   event.target.classList.add("clicked");
+         //   if(history.back()==undefined){
                 
-            }
-        }
-        let list=Array.from(document.getElementsByTagName("*"));
+        //    }
+       // }
+        //let list=Array.from(document.getElementsByTagName("*"));
         //for(i=0;max=list.length;i++){
         //    list[i].addEventListener("click",changing());
         //}
-        list.forEach((element) => {
-            element.addEventListener("click",changing);
-        });
+        //list.forEach((element) => {
+         //   element.addEventListener("click",changing);
+        //});
     </script>
 </head>
 <body>
@@ -69,7 +69,7 @@
             <img src="images/qAgzsz3ODVQ.jpg" alt="" width="200" height="150" class="pic-border">
             <figcaption>У меня кончились идеи</figcaption>
         </div>
-        <div>
+        <div class="for-resize-images-button-div">
             <button onclick="Image_size_increase()"> Увеличить размер картинок </button>
             <button onclick="Image_size_decrease()"> Уменьшить размер картинок </button>
             <button onclick="allsize()"> Выровнять размер </button>
