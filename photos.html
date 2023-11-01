@@ -18,17 +18,31 @@
             document.images[i+1].style.height='300px';
             }
         }
+        
         function Image_size_decrease(){
             for (i=0;i<5;i++){
             document.images[i+1].style.width='100px';
             document.images[i+1].style.height='100px';
             }
         }
+        function changing(){
+            event.target.classList.add("clicked");
+            if(history.back()==undefined){
+                
+            }
+        }
+        let list=Array.from(document.getElementsByTagName("*"));
+        //for(i=0;max=list.length;i++){
+        //    list[i].addEventListener("click",changing());
+        //}
+        list.forEach((element) => {
+            element.addEventListener("click",changing);
+        });
     </script>
 </head>
 <body>
     <header>
-        <h2>
+        <h2 class="no_select">
             Веб-технологии
             <img src="images/zt8eCKu_GeQ.jpg" alt="" width="50" class="pic-border">
             <nav>
@@ -60,7 +74,10 @@
             <button onclick="Image_size_decrease()"> Уменьшить размер картинок </button>
             <button onclick="allsize()"> Выровнять размер </button>
         </div>
-        <table border="1">
+        <div>
+            asdasasdsad
+        </div>
+        <table id="table1" border="1">
             <thead>
                 <th>Логотип</th>
                 <th>Описание</th>

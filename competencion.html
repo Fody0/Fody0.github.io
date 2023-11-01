@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        var isDark=false;
+        function toDark(){
+            //var list=Array.from(document.getElementsByTagName("*"));
+            //alert(list[0])
+            if(isDark==false){
+        Array.from(document.getElementsByTagName("*")).forEach(element => {
+            element.classList.add("dark-theme-blocks");
+            
+        });
+        isDark=true;
+    }
+            else{
+            Array.from(document.getElementsByTagName("*")).forEach(element => {
+            element.classList.remove("dark-theme-blocks"); 
+        });
+        isDark=false;
+        }
+    }
+    </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +30,13 @@
     <header>
         <h2>
             Веб-технологии
+            <div class="for-h2">
             <img src="images/zt8eCKu_GeQ.jpg" alt="" width="50">
+            <button onclick="toDark()">
+                <p>Change theme</p>
+            </button>
+            </div>
+            <div>
             <nav>
                 <ul>
                 <ol><a href="index.html">Главная</a></ol>
@@ -19,6 +45,7 @@
                 <ol><a href="photos.html">Фото</a></ol>
                 </ul>
             </nav>
+            </div>
         </h2>
     </header>
     <main class="padding-text">

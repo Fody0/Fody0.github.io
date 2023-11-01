@@ -4,6 +4,10 @@ h1,h2
     margin: 0%;
     text-shadow: red 2px 5px;
 }
+.for-h2{
+    display: flex;
+    justify-content: space-between
+}
 body
 {
     background-color: cadetblue;
@@ -57,7 +61,8 @@ button
     background-color: blue;
     box-shadow:  2px 4px violet;
     text-shadow: 2px 10px;
-    padding: 3%;
+    width: 100px;
+    height: 50px;
 }
 .padding-text
 {
@@ -117,6 +122,8 @@ button
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 10px;
 }
 .for-ul-blocks
 {
@@ -205,4 +212,13 @@ button
     border: 3px solid orange;
     background-color: rgba(251, 192, 147,0.4);
     border-radius: 50px;
+}
+.clicked{
+    background-color: black;
+    border:10px solid orange ;
+    color: pink;
+}
+.dark-theme-blocks{
+    background-color: black;
+    color: white;
 }
