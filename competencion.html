@@ -2,24 +2,95 @@
 <html lang="en">
 <head>
     <script>
-        var isDark=false;
+       
+        
+               if(localStorage.getItem('dark_theme') != 'false' && localStorage.getItem('dark_theme') != 'true'){
+            localStorage.setItem('dark_theme', 'false');}
+            
         function toDark(){
+            
+         
+            
+        
             //var list=Array.from(document.getElementsByTagName("*"));
             //alert(list[0])
-            if(isDark==false){
-        Array.from(document.getElementsByTagName("*")).forEach(element => {
-            element.classList.add("dark-theme-blocks");
-            
-        });
-        isDark=true;
-    }
+            if(localStorage.getItem('dark_theme')=='false'){
+                Array.from(document.getElementsByTagName("*")).forEach(element => {
+                    element.classList.add("dark-theme-blocks");
+                    });
+                localStorage.setItem('dark_theme', 'true' );
+                console.log("Труе")
+            }       
             else{
-            Array.from(document.getElementsByTagName("*")).forEach(element => {
-            element.classList.remove("dark-theme-blocks"); 
-        });
-        isDark=false;
-        }
+                Array.from(document.getElementsByTagName("*")).forEach(element => {
+                    element.classList.remove("dark-theme-blocks"); 
+                    });
+                    
+                localStorage.setItem('dark_theme', 'false');
+                local.localStorage("Фолз")
+            }
+            // localStorage.setItem('dark_theme', isDark );
+            console.log(localStorage.getItem('dark_theme'))
+    //alert(localStorage.getItem('dark_theme'));
     }
+    console.log(localStorage.getItem('dark_theme'))
+    </script>
+    <script>
+        let div1;
+        let texta1;
+        let texta2;
+        let texta3;
+        let forFile;
+        function Add_block(){
+            div1=document.createElement("div");
+            texta1=document.createElement('textarea');
+            texta2=document.createElement('textarea');
+            texta3=document.createElement('textarea');
+            forFile=document.createElement("input");
+            forFile.type="file";
+            forFile.multiple;
+            //let div1= document.createElement('div');
+            document.getElementById("Blocks").append(div1);
+            div1.classList.add("for-blocks");
+            div1.append(texta1);
+            div1.append(texta2);
+            div1.append(texta3);
+            div1.append(forFile);
+        }
+        function New_add(){
+            let div5=document.createElement("div");
+            let sm=document.createElement("small")
+            sm=texta1.value;
+            div5.append(sm);
+            let p1=document.createElement("p");
+            let b1=document.createElement("b");
+            b1.innerText=texta2.value;
+            p1.append(b1);
+            div5.append(p1);
+            let p2=document.createElement("p");
+            p2.classList.add("for-main-text");
+            p2.innerText=texta3.value;
+            div5.append(p2);
+            let div2=document.createElement("div");
+            div2.classList.add("for-lower-div");
+            let div3=document.createElement("div");
+            div3.classList.add("for-div-image");
+            let img=document.createElement("img");
+            img.src=window.URL.createObjectURL(forFile.files[0]);
+            img.classList.add("for-blocks-image");
+            let div4=document.createElement("div");
+            div4.textContent="Pochita";
+            div4.classList.add("for-div-text");
+            div3.append(img);
+            div3.append(div4);
+            div2.append(div3);
+            div1.append(div5);
+            div1.append(div2);
+            texta1.remove();
+            texta2.remove();
+            texta3.remove();
+            forFile.remove();
+        }
     </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
@@ -54,7 +125,7 @@
             sgsdgdfgfdgsfdgs
         </div>
     </main>
-<Div class="for-main-div-for-blocks">
+<Div id="Blocks" class="for-main-div-for-blocks">
     <div class="for-blocks">
         <div>
             <small>
@@ -123,6 +194,14 @@
                 </div>
     </div>   
 </Div>
+<div class="for-textbox-wrap">
+    <button onclick="Add_block()">
+        Add block
+    </button>
+    <button onclick="New_add()">
+        Create
+    </button>
+</div>
 <footer >
     <div class="wrapper flex-between-center">
         <h6 class="for-h6">Носков А.Е.</h6>
@@ -138,4 +217,18 @@
     </div>
     </footer>
 </body>
+<script>
+    // function save_theme(){
+    //     localStorage.setItem('dark_theme', isDark);
+    // }
+  //   alert(localStorage.getItem('dark_theme'));
+  if(localStorage.getItem('dark_theme')=='true'){
+        Array.from(document.getElementsByTagName("*")).forEach(element => {
+                element.classList.add("dark-theme-blocks");
+        });
+        console.log('да')       
+    }
+    console.log('нет')  
+     //ta1.value=localStorage.getItem('ta1');
+ </script>
 </html>
